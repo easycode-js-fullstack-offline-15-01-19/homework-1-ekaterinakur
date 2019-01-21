@@ -16,16 +16,17 @@ value = string[0].toUpperCase() + string.slice(1, string.length - 1) + string[st
 value = string.indexOf('string');
 
 //  4  Найти положение второго пробела (“вручную” ничего не считать)
-value = string.indexOf(' string');
+let firstSpace = string.indexOf(' ');
+let secondSpace = string.indexOf(' ', firstSpace + 1);
 
 //  5  Получить строку с 5-го символа длиной 4 буквы
-value = string.substr(5, [4]);
+value = string.substr(4, [4]);
 
 //  6  Получить строку с 5-го по 9-й символы
-value = string.substring(5, [9]);
+value = string.substring(4, [9]);
 
 //  7  Получить новую строку из исходной путем удаления последних 6-и символов
-value = string.slice(0, [string.length - 6]);
+value = string.slice(0, - 6);
 
 //  8  Из двух переменных a=20 и b=16 получить переменную string с текстом “2016”
 let a = 20,
@@ -50,6 +51,7 @@ value = Math.ceil(Math.random() * 13);
 
 //  4 Проверить результат вычисления 0.6 + 0.7 - как привести к нормальному виду (1.3)?
 value = (0.6 + 0.7).toFixed(1);
+value = Number(value);
 
 //  5 Получить число из строки ‘100$’
 value = parseFloat('100$');
